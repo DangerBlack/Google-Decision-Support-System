@@ -22,4 +22,4 @@ The approach is really stupid but we do not discuss the approach but the results
 #results
 The program create a graph named as *"I like girls with red hair.png"* as in the example the union of first sentence and first option.
 
-[Image of the sample](http://i.imgur.com/dCupBeT.png)
+![Image of the sample](http://i.imgur.com/dCupBeT.png)
