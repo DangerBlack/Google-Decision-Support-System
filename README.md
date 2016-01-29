@@ -6,7 +6,7 @@ A python tools for making fast decision about world by watching the results numb
 
 In order to use this software you need to add at *query.txt* file the questions you are looking for.
 ```
-I like grils with
+I like girls with
 -red hair
 -black hair
 -brown hair
