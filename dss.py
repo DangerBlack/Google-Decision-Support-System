@@ -30,7 +30,8 @@ def requestQuery(query):
 		headers=header
 	)
 	#print(res.encoding);
-	text=res.text.encode('utf-8')
+	res.encoding='utf-8'
+	text=res.text
 	idx=text.find('<div id="resultStats">')+len('<div id="resultStats">')
 	fidx=text.find('<nobr>',idx)
 	textfound=text[idx:fidx]
