@@ -90,8 +90,7 @@ def searchComplete(title,lables):
 		time.sleep(5)
 	plotAPie(title,labels,values)
 
-def readFileOfQuery(filename='query.txt'):
-	in_file = open(filename,"r")
+def readFileOfQuery(in_file):
 	listQuery = in_file.read()
 	in_file.close()
 	query=[]
@@ -131,7 +130,12 @@ text of some query
 you must have four query add random word if you want make them unused
 '''
 
-query=readFileOfQuery()
+if len(sys.argv) < 2:
+	fd = sys.stdin
+else:
+	fd = open(sys.argv[1], "r")
+
+query=readFileOfQuery(fd)
 for q in query:
 	titles=q[0]
 	labels=q[1]
