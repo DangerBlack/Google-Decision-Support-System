@@ -41,7 +41,13 @@ def requestQuery(query):
 		results=field[1]
 	else:
 		results=field[0]
-	results=str.replace(results,'.','')
+		
+	# Temp solution to make it work
+	try:
+		results = results.replace('.','')
+	except:
+		results = str.replace(results,'.','')
+		
 	print(results)
 	#print(results)
 	return int(results)
