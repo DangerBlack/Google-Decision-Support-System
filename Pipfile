@@ -1,0 +1,19 @@
+[[source]]
+verify_ssl = true
+name = "pypi"
+url = "https://pypi.org/simple"
+
+[packages]
+pytelegrambotapi = "*"
+requests = "*"
+matplotlib = "*"
+Pillow = "*"
+numpy = "*"
+
+[requires]
+python_version = "*"
+
+[dev-packages]
+
+[pipenv]
+allow_prereleases = true
