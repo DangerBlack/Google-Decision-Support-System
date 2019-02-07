@@ -34,7 +34,7 @@ def echo_all(message):
     mex = message.text.replace("/pie "," ")
     logging.info('Request: '+mex.replace("\n"," / "))
     try:
-        out = "Send me the question"
+        out = "Please send the statment"
         msg = bot.send_message(chat_id, out, parse_mode="HTML")
         bot.register_next_step_handler(msg,process_head_step)
     except ValueError as E:
@@ -45,7 +45,7 @@ def process_head_step(message):
     try:
         chat_id = message.chat.id
         head = message.text
-        out = "Send me the first option:"
+        out = "Send me the first option for (<i>"+str(head)+"</i>)"
         msg = bot.send_message(chat_id, out, parse_mode="HTML")
         bot.register_next_step_handler(msg,process_option_step,head,[])
     except Exception as e:
@@ -58,7 +58,7 @@ def process_option_step(message, head, options):
         option = message.text
         if not option == "done" and not option == "/done":
             options.append(option)
-            out = "Send me another option or write /done"
+            out = "Send me the next option for (<i>"+str(head)+"</i>)\nSend /done when you have done."
             msg = bot.send_message(chat_id, out, parse_mode="HTML")
             bot.register_next_step_handler(msg,process_option_step,head,options)
         else:
