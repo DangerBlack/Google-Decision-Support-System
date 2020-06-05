@@ -43,7 +43,7 @@ def requestQuery(query):
         #print(res.encoding);
         res.encoding='utf-8'
         text=res.text
-        idx=text.find('<div id="resultStats">')+len('<div id="resultStats">')
+        idx=text.find('<div id="result-stats">')+len('<div id="result-stats">')
         fidx=text.find('<nobr>',idx)
         textfound=text[idx:fidx]
         print(textfound)
